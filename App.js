@@ -1,11 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
+import { StatusBar, View } from 'react-native';
+import LoginScreen from './screen/LoginScreen';
 
-export default function App() {
+const App = () => {
   return (
-    <View className="flex-1 justify-center items-center bg-white">
-      <Text className="text-red-600 font-bold">Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <LoginScreen />
   );
 }
+
+
+export default App;
