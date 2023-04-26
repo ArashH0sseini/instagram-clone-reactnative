@@ -1,11 +1,10 @@
-import { StatusBar, View } from 'react-native';
-import LoginScreen from './screen/LoginScreen';
+import HomeScreen from './screen/HomeScreen';
+import { withExpoSnack } from 'nativewind';
 
 const App = () => {
   return (
-    <LoginScreen />
+    <HomeScreen />
   );
 }
 
-
-export default App;
+export default withExpoSnack(App)
