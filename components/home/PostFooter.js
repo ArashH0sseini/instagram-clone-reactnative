@@ -39,7 +39,7 @@ const PostFooter = () => {
                             type='ionicon'
                             size={28}
                             color={colorScheme === "dark" ? "#fff" : "#000"}
-                            onPress={() => setLike(true)} />
+                        />
                     </View>
                     <TouchableOpacity>
                         {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, Image, View, Text, ScrollView } from 'react-native';
+import { Image, View, Text, ScrollView } from 'react-native';
 import Avatar from '../../assets/avatar.jpg'
 import Users from '../../data/users'
 import { Icon } from 'react-native-elements'

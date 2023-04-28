@@ -29,8 +29,18 @@ export default [
         comments: [
             {
                 user: Users[2].username,
-                comments: 'comment'
+                comment: 'comment'
             },
+        ]
+    },
+    {
+        image: 'https://picsum.photos/id/99/1000/800',
+        user: Users[1].username,
+        title: 'title',
+        caption: 'this is just a dummy caption for a dummy post in a dummy application! #neonlearn #reactnative',
+        profile_img: Users[1].image,
+        likes: '744',
+        comments: [
         ]
     },
 ]

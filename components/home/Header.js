@@ -1,4 +1,4 @@
-import { View, Text, Pressable, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Pressable, Image, TouchableOpacity, StatusBar } from 'react-native';
 import { useColorScheme } from "nativewind";
 import { Icon } from 'react-native-elements'
 import Logo from '../../assets/Instagram_logo.png'
