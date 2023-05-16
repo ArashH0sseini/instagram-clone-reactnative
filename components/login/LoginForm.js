@@ -3,10 +3,12 @@ import { View, TextInput, Text, Pressable } from 'react-native';
 import { loginSchema } from '../../validations/loginValidations';
 import { Formik, ErrorMessage } from 'formik';
 import { Icon } from 'react-native-elements'
+import { useNavigation } from '@react-navigation/native';
 
 
 const LoginForm = () => {
     const [loginValues, setLoginValues] = useState()
+    const navigation = useNavigation()
 
     const intialValues = {
         username: "",
@@ -16,7 +18,7 @@ const LoginForm = () => {
     const submitFormHandler = (values, resetForm) => {
         setLoginValues(values)
         resetForm()
-        console.log(loginValues)
+        navigation.replace("Application")
     }
     return (
         <Formik initialValues={intialValues} validationSchema={loginSchema} onSubmit={(values, { resetForm }) => submitFormHandler(values, resetForm)}>

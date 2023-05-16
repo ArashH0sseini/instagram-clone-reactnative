@@ -4,8 +4,11 @@ import post from '../../data/post'
 import PostFooter from './PostFooter';
 import Comments from './Comments';
 import Avatar from '../../assets/avatar.jpg'
+import { useState } from 'react';
 
 const Post = () => {
+    const [like, setLike] = useState(false)
+
     return (
         <FlatList
             data={post}
@@ -13,10 +16,12 @@ const Post = () => {
             renderItem={({ item }) => (
                 <View>
                     <PostHeader name={item.user} image={item.profile_img} />
-                    <Image source={{ uri: item.image }} className="h-[500px] w-full" style={{ resizeMode: "cover" }} />
-                    <PostFooter />
+                    <View className="w-full" style={{ height: 450 }}>
+                        <Image source={{ uri: item.image }} className="h-full" style={{ resizeMode: "cover" }} />
+                    </View>
+                    <PostFooter like={like} setLike={setLike} />
                     <View className="px-4 space-y-1">
-                        <Text className=" font-bold">{item.likes} likes</Text>
+                        <Text className="font-bold">{item.likes} likes</Text>
                         <View>
                             <Text numberOfLines={2} className="dark:text-white">
                                 <Text className=" font-bold dark:text-white">{item.user}</Text>

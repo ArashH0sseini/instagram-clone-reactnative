@@ -5,9 +5,8 @@ import { useColorScheme } from "nativewind";
 import DirectIcon from '../../assets/direct.png'
 import DirectIconLight from '../../assets/direct-light.png'
 
-const PostFooter = () => {
+const PostFooter = ({ like, setLike }) => {
     const [addToCollection, setAddToCollection] = useState(false)
-    const [like, setLike] = useState(false)
     const { colorScheme, toggleColorScheme } = useColorScheme();
 
     return (

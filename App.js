@@ -1,9 +1,14 @@
 import HomeScreen from './screen/HomeScreen';
 import { withExpoSnack } from 'nativewind';
+import { NavigationContainer } from '@react-navigation/native';
+import StackNavigator from './components/StackNavigator';
+
 
 const App = () => {
   return (
-    <HomeScreen />
+    <NavigationContainer>
+      <StackNavigator />
+    </NavigationContainer>
   );
 }
 
