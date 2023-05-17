@@ -8,6 +8,7 @@ import GlobalStyles from '../utils/GlobalStyles'
 function HomeScreen() {
     return (
         <SafeAreaView style={GlobalStyles.androidSafeArea} className="flex-1 bg-white dark:bg-black">
+            {/* <StatusBar hidden /> */}
             <Header />
             <StoryBox />
             <Post />

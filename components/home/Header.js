@@ -11,7 +11,7 @@ const Header = () => {
     const { colorScheme, toggleColorScheme } = useColorScheme();
 
     return (
-        <View className="flex flex-row flex-1 justify-between items-center px-4 bg-white dark:bg-black">
+        <View className="flex flex-row flex-1 justify-between items-center px-4 py-6 bg-white dark:bg-black">
             <View className="flex flex-row items-center">
                 {
                     colorScheme === "dark" ?
