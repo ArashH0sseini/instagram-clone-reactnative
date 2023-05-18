@@ -11,4 +11,5 @@ const App = () => {
   );
 }
 
-export default withExpoSnack(App)
+export default App
+// export default withExpoSnack(App)

@@ -1,4 +1,4 @@
-import { FlatList, Image, View, Text, TextInput } from 'react-native';
+import { FlatList, Image, View, Text, TextInput, Dimensions } from 'react-native';
 import PostHeader from './PostHeader';
 import post from '../../data/post'
 import PostFooter from './PostFooter';
@@ -8,6 +8,8 @@ import { useState } from 'react';
 
 const Post = () => {
     const [like, setLike] = useState(false)
+    const { height } = Dimensions.get('window');
+    const itemHeight = (height) / 1.5;
 
     return (
         <FlatList
@@ -16,7 +18,7 @@ const Post = () => {
             renderItem={({ item }) => (
                 <View>
                     <PostHeader name={item.user} image={item.profile_img} />
-                    <View className="w-full" style={{ height: 450 }}>
+                    <View className="w-full" style={{ height: itemHeight }}>
                         <Image source={{ uri: item.image }} className="h-full" style={{ resizeMode: "cover" }} />
                     </View>
                     <PostFooter like={like} setLike={setLike} />

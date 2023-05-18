@@ -23,13 +23,13 @@ const LoginForm = () => {
     return (
         <Formik initialValues={intialValues} validationSchema={loginSchema} onSubmit={(values, { resetForm }) => submitFormHandler(values, resetForm)}>
             {({ handleChange, handleBlur, handleSubmit, values }) => (
-                <View className="w-full space-y-4">
+                <View className="w-full space-y-2">
                     <TextInput
                         value={values.username}
                         onChangeText={handleChange('username')}
                         onBlur={handleBlur('username')}
-                        className="bg-gray-100 p-2 px-4 w-full rounded-lg border-2 border-gray-200"
-                        placeholder='Phone number, username or email'
+                        className="bg-white p-3 px-4 w-full rounded-lg border-[1px] border-gray-200"
+                        placeholder='Username,email or mobile number'
                         autoFocus
                         autoCapitalize='none'
                     />
@@ -51,7 +51,7 @@ const LoginForm = () => {
                         secureTextEntry
                         textContentType='password'
                         autoCorrect={false}
-                        className="bg-gray-100 p-2 px-4 w-full rounded-lg border-2 border-gray-200"
+                        className="bg-white p-3 px-4 w-full rounded-lg border-[1px] border-gray-200"
                         placeholder='Password'
                     />
                     <ErrorMessage name="password" render={(error) => (
@@ -65,10 +65,10 @@ const LoginForm = () => {
                             <Text className="text-red-600 text-sm">{error}</Text>
                         </View>
                     )} />
-                    <Text className="text-blue-400 text-right font-bold">Forgot password?</Text>
                     <Pressable onPress={handleSubmit}>
-                        <Text className="bg-blue-500 text-white text-center p-3 rounded-lg text-base my-5">Log In</Text>
+                        <Text className="bg-blue-600 text-blue-100 text-center p-3 rounded-lg text-base my-2">Log In</Text>
                     </Pressable>
+                    <Text className="text-gray-700 text-center text-sm font-bold">Forgot password?</Text>
                 </View>
             )}
         </Formik>
